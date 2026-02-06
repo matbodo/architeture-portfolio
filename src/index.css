@@ -1,0 +1,114 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  /* Fontes do projeto */
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Estilos para a seção Hero */
+.hero {
+  @apply relative w-full h-screen bg-cover bg-center overflow-hidden;
+}
+
+.hero-bg {
+  @apply absolute inset-0 bg-cover bg-center bg-black/60 z-10;
+  background-image: url("/images/background.jpg");
+}
+
+.hero-overlay {
+  @apply absolute inset-0 bg-black/70 z-10;
+}
+
+.hero-content {
+  @apply relative z-10 container mx-auto h-full flex flex-col justify-center items-start px-4 lg:bottom-32 lg:right-20;
+}
+
+.hero-title {
+  @apply font-heading text-white leading-none text-4xl md:text-7xl lg:text-[6vw];
+}
+
+.hero-subtitle {
+  @apply mt-0 text-white/70 tracking-widest text-sm md:text-xl;
+}
+
+/* Estilos para a barra de navegação */
+.nav {
+  @apply absolute top-0 left-0 w-full  z-50;
+}
+
+.nav-container {
+  @apply container mx-auto flex justify-between items-center py-6 px-0;
+}
+
+.nav-logo {
+  @apply flex items-center gap-2 text-white px-4;
+}
+
+.logo-img {
+  @apply w-10 h-auto object-contain;
+}
+
+.logo-text {
+  @apply text-sm leading-tight mr-10;
+}
+
+.nav-buttons {
+  @apply hidden md:flex gap-10;
+}
+
+.nav-buttons button {
+  @apply bg-transparent opacity-70 text-white/100 text-sm uppercase
+         tracking-widest cursor-pointer border-none
+         transition-opacity duration-300;
+}
+
+.nav-buttons button:hover {
+  @apply !opacity-100;
+}
+
+.nav-mobile {
+  @apply fixed top-0 right-0 h-dvh w-[75%] max-w-[120px]
+         bg-transparent backdrop-blur-md pt-16
+          px-2 flex flex-col  items-start
+         z-[100];
+}
+
+.nav-mobile-close {
+  @apply absolute top-6 right-0 text-white text-3xl;
+}
+
+.nav-toggle {
+  @apply flex md:hidden pr-4 flex-col gap-1.5 bg-transparent border-none cursor-pointer z-[200] relative;
+}
+
+.nav-toggle span {
+  @apply w-6 h-0.5 bg-white transition-all duration-300;
+}
+
+.mobile-links {
+  @apply flex flex-col gap-4 items-end w-full;
+}
+
+.mobile-links button {
+  @apply bg-transparent border-0
+         text-white/70 text-sm uppercase tracking-[0.2em]
+         cursor-pointer text-left;
+}
+
+.home {
+  @apply bg-white h-10 w-full rounded-sm;
+}

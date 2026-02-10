@@ -20,7 +20,8 @@ const Nav = () => {
     hasAnimated.current = true;
 
     const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ delay: 0.5 });
+      // Reduzido o delay inicial para 0.1 para os nav-buttons aparecerem antes
+      const tl = gsap.timeline({ delay: 0.3 });
 
       tl.from(logoRef.current, {
         x: -80,
@@ -53,11 +54,11 @@ const Nav = () => {
           {
             x: 0,
             opacity: 0.7,
-            duration: 3,
-            stagger: 0.15,
+            duration: 1.5,
+            stagger: 0.3,
             ease: "power3.out",
           },
-          "-=0.3",
+          "-=2.2",
         );
       }
     }, navRef);
@@ -134,7 +135,6 @@ const Nav = () => {
             <button>Contato</button>
           </div>
 
-          {/* BOTÃO MOBILE */}
           <button
             className="nav-toggle md:hidden"
             onClick={() => setIsOpen((isOpen) => !isOpen)}

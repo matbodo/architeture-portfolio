@@ -22,17 +22,17 @@ const Hero = () => {
     );
 
     gsap.from(heroSplit.chars, {
-      yPercent: 100,
+      yPercent: 10,
       opacity: 0,
-      duration: 2,
+      duration: 1,
       ease: "power1.out",
     });
 
     gsap.from(paragraphSplit.lines, {
-      xPercent: -80,
+      xPercent: -40,
       opacity: 0,
-      duration: 1.8,
-      delay: 0.3,
+      duration: 1.5,
+      delay: 0.5,
       ease: "power2.out",
     });
   }, []);

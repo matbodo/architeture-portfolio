@@ -19,7 +19,6 @@ const About = () => {
           start: "top bottom",
           end: "bottom bottom",
           scrub: true,
-          markers: true,
         },
       });
 

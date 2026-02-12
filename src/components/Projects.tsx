@@ -1,8 +1,8 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
+// import { ScrollTrigger } from "gsap/all";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
     {
@@ -32,19 +32,29 @@ const projects = [
 ];
 
 export default function Projects() {
-    useEffect(() => {
-        gsap.from(".project-item", {
-            y: 80,
-            opacity: 0,
-            stagger: 0.2,
-            duration: 1.2,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: "#projects",
-                start: "top 80%",
-            }
-        })
-    })
+    // useEffect(() => {
+    //     gsap.set(".project-item", {
+    //         y: 80,
+    //         opacity: 0,
+    //     });
+
+    //     gsap.to(".project-item", {
+    //         y: 0,
+    //         opacity: 1,
+    //         stagger: 0.2,
+    //         duration: 1.2,
+    //         ease: "power2.out",
+    //         scrollTrigger: {
+    //             trigger: "#projects",
+    //             start: "top 80%",
+    //             onEnter: () => console.log("Projects animation triggered"),
+    //         }
+    //     });
+
+    //     return () => {
+    //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+    //     };
+    // }, [])
 
     return (
         <section id="projects" className="projects">
@@ -58,7 +68,7 @@ export default function Projects() {
                         <div className="project-overlay" />
 
                         <div className="project-info">
-                            <h3>{project.title}</h3>
+                            <h1>{project.title}</h1>
                             <p>
                                 {project.location} | {project.type}
                             </p>

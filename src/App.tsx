@@ -3,6 +3,7 @@ import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import Lenis from '@studio-freight/lenis'
 import Projects from './components/Projects'
+import Contact from './components/Contact'
 import About from './components/About'
 import Hero from './components/Hero'
 import Nav from './components/Nav'
@@ -38,6 +39,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
+      <Contact />
     </>
   )
 }

@@ -256,3 +256,9 @@ body {
     flex: none;
   }
 }
+
+/* ========== CONTACT ==========*/
+
+.contact {
+  @apply relative w-full min-h-screen;
+}

@@ -2,6 +2,8 @@ import { ScrollTrigger } from 'gsap/all'
 import { useEffect } from 'react'
 import { gsap } from 'gsap'
 import Lenis from '@studio-freight/lenis'
+import SecInterSection from './components/SecInterSection'
+import InterSection from './components/InterSection'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import About from './components/About'
@@ -37,7 +39,9 @@ function App() {
     <>
       <Nav />
       <Hero />
+      <InterSection />
       <About />
+      <SecInterSection />
       <Projects />
       <Contact />
     </>

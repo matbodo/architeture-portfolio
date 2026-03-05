@@ -24,8 +24,10 @@ body {
 }
 
 /* =========== HERO =========== */
+
 .hero {
   @apply relative w-full h-screen bg-cover bg-center overflow-hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
 }
 
 .hero-bg {
@@ -50,6 +52,7 @@ body {
 }
 
 /* ========== NAV ==========*/
+
 .nav {
   @apply absolute top-0 left-0 w-full  z-50;
 }
@@ -113,9 +116,82 @@ body {
          cursor-pointer text-left;
 }
 
+/* ========== INTERSECTION ==========*/
+.intersection {
+  position: relative;
+  height: 115vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.intersection-bg {
+  position: absolute;
+  z-index: 1;
+  inset: -30% 0%;
+  background-image: url("/images/bg-image-1.jpg");
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
+.projects-images-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 72px;
+  padding: 72px;
+  box-shadow: 100px 100px 600px rgba(0, 0, 0, 0.75);
+}
+
+.projects-images-item {
+  @apply bg-cover bg-center opacity-100;
+  border-radius: 4px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.55),
+    0 2px 8px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.projects-images-item:hover {
+  transform: scale(1.07);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.7),
+    0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* ========== SECOND INTERSECTION ==========*/
+
+.sec-intersection {
+  position: relative;
+  height: 115vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.sec-intersection-bg {
+  position: absolute;
+  z-index: 1;
+  inset: -30% 0%;
+  background-image: url("/images/bg-image-2.png");
+  background-size: cover;
+  background-position: center;
+  will-change: transform;
+}
+
 /* ========== ABOUT ==========*/
 .about {
   @apply relative min-h-[100vh] flex items-center;
+  z-index: 1;
+  overflow: hidden;
+  box-shadow:
+    0 -24px 60px rgba(0, 0, 0, 0.75),
+    0 24px 60px rgba(0, 0, 0, 0.75);
 }
 
 .about-bg {
@@ -191,6 +267,10 @@ body {
 .projects {
   @apply w-full min-h-screen relative;
   overflow-x: hidden;
+  z-index: 2;
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.75),
+    0 -24px 60px rgba(0, 0, 0, 0.75);
 }
 
 .projects-grid {
@@ -260,5 +340,86 @@ body {
 /* ========== CONTACT ==========*/
 
 .contact {
-  @apply relative w-full min-h-screen;
+  @apply w-full h-screen flex items-center;
+  position: relative;
+  z-index: -2;
+  margin-top: -150px;
+  padding-top: 150px;
+  background:
+    radial-gradient(
+      circle at 70% 15%,
+      rgba(255, 255, 255, 0.08),
+      transparent 55%
+    ),
+    linear-gradient(140deg, #2b2b2b 0%, #222 60%, #1a1a1a 100%);
+  color: #f5f5f5;
+}
+
+.contact-inner {
+  @apply container mx-auto px-6 md:px-16
+         flex flex-col justify-between h-full;
+  max-width: 1200px;
+}
+
+.contact-grid {
+  @apply grid items-center;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.55fr);
+}
+
+.contact-left {
+  @apply flex flex-col;
+}
+
+.contact-title {
+  font-family: var(--font-heading);
+  @apply text-white leading-none;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.contact-right {
+  @apply flex justify-end items-center;
+}
+
+.contact-logo {
+  @apply w-[70vh];
+}
+
+.contact-info {
+  @apply flex flex-col gap-3;
+}
+
+.contact-text {
+  @apply text-sm md:text-base text-white/70;
+  max-width: 480px;
+}
+
+.contact-email {
+  @apply text-base md:text-xl text-white/80
+         transition-opacity duration-300;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.contact-email:hover {
+  @apply text-white/100;
+}
+
+.contact-cta-row {
+  @apply w-full flex items-end justify-between;
+}
+
+.contact-socials {
+  @apply flex items-center gap-6 text-white/60 text-4xl
+         hover:text-white/100 transition-colors duration-300;
+}
+
+.contact-socials:hover {
+  transform: scale(1.1);
+}
+
+.contact-bottom {
+  @apply w-full flex flex-wrap items-center gap-1
+         text-base text-white/40 mb-20;
 }

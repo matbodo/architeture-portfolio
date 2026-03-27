@@ -12,20 +12,26 @@ export const InterSection = () => {
     const section = sectionRef.current;
     const img = imgRef.current;
 
-    gsap.fromTo(
-      img,
-      { yPercent: -12 },
-      {
-        yPercent: 12,
-        ease: "none",
-        scrollTrigger: {
-          trigger: section,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: true,
+    if (!section || !img) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        img,
+        { yPercent: -12 },
+        {
+          yPercent: 12,
+          ease: "none",
+          scrollTrigger: {
+            trigger: section,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true,
+          },
         },
-      },
-    );
+      );
+    });
+
+    return () => ctx.revert();
   }, []);
 
   const images = [

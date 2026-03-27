@@ -18,10 +18,9 @@ function App() {
       duration: 1.2,
       easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
-      smoothTouch: false,
     });
 
-    function raf(time) {
+    function raf(time: number) {
       lenis.raf(time);
       ScrollTrigger.update();
       requestAnimationFrame(raf);

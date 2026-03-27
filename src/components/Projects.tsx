@@ -1,7 +1,5 @@
 // import { useEffect } from "react";
 // import { ScrollTrigger } from "gsap/all";
-import { gsap } from "gsap";
-
 // gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
@@ -13,7 +11,7 @@ const projects = [
     },
     {
         title: "LINEA DE VIDA",
-        location: "Medellín, Colombia",
+        location: "Medellin, Colombia",
         type: "Mixed-use",
         image: "/images/project2.jpg",
     },
@@ -47,7 +45,7 @@ export default function Projects() {
     //         scrollTrigger: {
     //             trigger: "#projects",
     //             start: "top 80%",
-    //             onEnter: () => console.log("Projects animation triggered"),
+    //             onEnter: () => console.log("Projects animation trigegered"),
     //         }
     //     });
 

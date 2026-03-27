@@ -15,6 +15,12 @@ const Nav = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
+  const scrollTo = (id) => {
+    const el = document.querySelector(id);
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+    setIsOpen(false);
+  };
+
   useEffect(() => {
     if (hasAnimated.current) return;
     hasAnimated.current = true;
@@ -129,10 +135,10 @@ const Nav = () => {
           </div>
 
           <div className="nav-buttons desktop">
-            <button>Home</button>
-            <button>Sobre</button>
-            <button>Projetos</button>
-            <button>Contato</button>
+            <button onClick={() => scrollTo("#hero")}>Home</button>
+            <button onClick={() => scrollTo("#about")}>Sobre</button>
+            <button onClick={() => scrollTo("#projects")}>Projetos</button>
+            <button onClick={() => scrollTo("#contact")}>Contato</button>
           </div>
 
           <button
@@ -148,13 +154,18 @@ const Nav = () => {
 
         <div ref={mobileMenuRef} className="nav-mobile">
           <nav className="mobile-links">
-            {["Home", "Sobre", "Projetos", "Contato"].map((item, i) => (
+            {[
+              { label: "Home", id: "#hero" },
+              { label: "Sobre", id: "#about" },
+              { label: "Projetos", id: "#projects" },
+              { label: "Contato", id: "#contact" },
+            ].map(({ label, id }, i) => (
               <button
-                key={item}
+                key={label}
                 ref={(el) => (mobileLinksRef.current[i] = el)}
-                // onClick={() => setIsOpen(false)}
+                onClick={() => scrollTo(id)}
               >
-                {item}
+                {label}
               </button>
             ))}
           </nav>

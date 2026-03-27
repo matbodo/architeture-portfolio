@@ -7,11 +7,13 @@ export const Contact = () => {
         <div className="contact-grid">
           <div className="contact-left">
             <h2 id="contact-title" className="contact-title">
-              Re-imagine
+              Onde sua
               <br />
-              Your Future
+              Visão ganha
               <br />
-              Project
+              Forma e
+              <br />
+              Identidade
             </h2>
           </div>
           <div className="contact-right">
@@ -31,19 +33,39 @@ export const Contact = () => {
             Entre em contato e vamos criar algo que va alem da estetica. Trago
             clareza no processo e proximos passos para o seu projeto.
           </p>
-          <a className="contact-email">claudiabruno@exemplo.com</a>
+          <a href="mailto:claudiabruno@exemplo.com" className="contact-email">
+            claudiabruno@exemplo.com
+          </a>
         </div>
 
         {/* CTA row */}
         <div className="contact-cta-row">
           <div className="contact-socials">
-            <a>
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </a>
-            <a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </a>
-            <a>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="LinkedIn"
+            >
               <FaLinkedinIn />
             </a>
           </div>
@@ -51,9 +73,7 @@ export const Contact = () => {
 
         {/* Bottom meta */}
         <div className="contact-bottom">
-          <span>
-            2026 Claudia Bruno Arquitetura. Todos os direitos reservados.
-          </span>
+          <span>2026 Claudia Bruno Arquitetura.</span>
         </div>
       </div>
     </section>

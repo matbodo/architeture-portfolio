@@ -27,7 +27,6 @@ body {
 
 .hero {
   @apply relative w-full h-screen bg-cover bg-center overflow-hidden;
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75);
 }
 
 .hero-bg {
@@ -119,9 +118,25 @@ body {
 /* ========== INTERSECTION ==========*/
 .intersection {
   position: relative;
-  height: 115vh;
+  height: 120vh;
   overflow: hidden;
   z-index: 0;
+}
+
+.intersection::before,
+.intersection::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 80px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.intersection::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
 }
 
 .intersection-bg {
@@ -134,6 +149,14 @@ body {
   will-change: transform;
 }
 
+.intersection-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
 .projects-images-grid {
   position: absolute;
   inset: 0;
@@ -141,8 +164,8 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 72px;
-  padding: 72px;
+  gap: 86px;
+  padding: 86px;
   box-shadow: 100px 100px 600px rgba(0, 0, 0, 0.75);
 }
 
@@ -165,6 +188,23 @@ body {
     0 4px 16px rgba(0, 0, 0, 0.5);
 }
 
+@media (max-width: 768px) {
+  .projects-images-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px 20px;
+  }
+
+  .projects-images-item:nth-child(n + 4) {
+    display: none;
+  }
+
+  .intersection {
+    height: 100vh;
+  }
+}
+
 /* ========== SECOND INTERSECTION ==========*/
 
 .sec-intersection {
@@ -172,6 +212,9 @@ body {
   height: 115vh;
   overflow: hidden;
   z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .sec-intersection-bg {
@@ -182,6 +225,207 @@ body {
   background-size: cover;
   background-position: center;
   will-change: transform;
+}
+
+.sec-intersection-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.sec-intersection-content {
+  position: relative;
+  z-index: 10;
+  max-width: 1200px;
+  margin: -10rem auto 0;
+  padding: 0 2rem;
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  .sec-intersection-content {
+    max-width: 1800px;
+  }
+}
+.process-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 5rem;
+  letter-spacing: -0.02em;
+  position: relative;
+  opacity: 0;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 0 1rem;
+  position: relative;
+}
+
+@media (min-width: 1280px) {
+  .process-grid {
+    gap: 5rem;
+    padding: 0 2rem;
+  }
+}
+
+.process-line {
+  position: absolute;
+  top: 110px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.2) 80%,
+    transparent
+  );
+  z-index: 1;
+  transform-origin: left;
+  opacity: 0;
+}
+
+@media (min-width: 1280px) {
+  .process-line {
+    top: 150px;
+  }
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 2;
+  opacity: 0;
+}
+
+@media (min-width: 1280px) {
+  .process-step {
+    padding: 3rem 2rem;
+  }
+}
+
+.process-step:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.process-icon {
+  font-size: 3rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  width: 90px;
+  height: 90px;
+  position: relative;
+}
+
+.process-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.process-step:hover .process-icon::before {
+  width: 110%;
+  height: 110%;
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 1280px) {
+  .process-icon {
+    font-size: 3.5rem;
+    width: 110px;
+    height: 110px;
+  }
+}
+
+.process-step-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+
+.process-step-description {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+  margin: 0 auto;
+}
+
+@media (min-width: 1280px) {
+  .process-step-title {
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .process-step-description {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+}
+
+@media (max-width: 1024px) {
+  .process-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .process-grid::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .sec-intersection {
+    height: auto;
+    min-height: 100vh;
+    padding: 4rem 0;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .process-title {
+    margin-bottom: 3rem;
+  }
+
+  .process-step {
+    padding: 2rem 1.5rem;
+  }
 }
 
 /* ========== ABOUT ==========*/
@@ -265,16 +509,16 @@ body {
 /* ========== PROJECTS ==========*/
 
 .projects {
-  @apply w-full min-h-screen relative;
+  @apply w-full relative;
   overflow-x: hidden;
-  z-index: 2;
+  z-index: 3;
   box-shadow:
     0 24px 60px rgba(0, 0, 0, 0.75),
     0 -24px 60px rgba(0, 0, 0, 0.75);
 }
 
 .projects-grid {
-  @apply flex w-full min-h-screen;
+  @apply flex w-full;
 }
 
 .project-item {
@@ -337,14 +581,31 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  .logo-text {
+    display: none !important;
+  }
+
+  .nav-logo {
+    margin-top: 1rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .logo-img {
+    width: 3rem;
+  }
+}
+
 /* ========== CONTACT ==========*/
 
 .contact {
   @apply w-full h-screen flex items-center;
   position: relative;
-  z-index: -2;
-  margin-top: -150px;
-  padding-top: 150px;
+  z-index: 2;
+  margin-top: 0 !important;
+  padding-top: 0 !important;
   background:
     radial-gradient(
       circle at 70% 15%,
@@ -359,6 +620,8 @@ body {
   @apply container mx-auto px-6 md:px-16
          flex flex-col justify-between h-full;
   max-width: 1200px;
+  position: relative;
+  z-index: 10;
 }
 
 .contact-grid {
@@ -378,12 +641,36 @@ body {
   letter-spacing: -0.02em;
 }
 
+@media screen and (max-width: 768px) {
+  .contact-title {
+    display: none;
+  }
+}
+
 .contact-right {
-  @apply flex justify-end items-center;
+  @apply flex items-center;
+  pointer-events: none;
+  justify-content: center;
+  padding-right: 0%;
 }
 
 .contact-logo {
   @apply w-[70vh];
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-logo {
+    width: 35vh;
+    margin-top: 8rem;
+  }
+
+  .contact-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .contact-info {
@@ -411,15 +698,28 @@ body {
 }
 
 .contact-socials {
-  @apply flex items-center gap-6 text-white/60 text-4xl
-         hover:text-white/100 transition-colors duration-300;
+  @apply flex items-center gap-6 text-white/60 text-4xl;
+  position: relative;
+  z-index: 10;
 }
 
-.contact-socials:hover {
-  transform: scale(1.1);
+.social-link {
+  @apply text-white/60 transition-all duration-300 ease-out cursor-pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-link:hover {
+  @apply text-white/100;
+  transform: translateY(-4px);
 }
 
 .contact-bottom {
   @apply w-full flex flex-wrap items-center gap-1
-         text-base text-white/40 mb-20;
+         text-base text-white/40 mb-10;
 }

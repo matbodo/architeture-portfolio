@@ -30,11 +30,10 @@ export const Contact = () => {
         {/* Description + email */}
         <div className="contact-info">
           <p className="contact-text">
-            Entre em contato e vamos criar algo que va alem da estetica. Trago
-            clareza no processo e proximos passos para o seu projeto.
+            Acesso as redes sociais ou envie um email para discutir seu projeto.
           </p>
-          <a href="mailto:claudiabruno@exemplo.com" className="contact-email">
-            claudiabruno@exemplo.com
+          <a href="mailto:claudiabcardoso@uol.com.br" className="contact-email">
+            claudiabcardoso@uol.com.br
           </a>
         </div>
 
@@ -51,7 +50,7 @@ export const Contact = () => {
               <FaFacebookF />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/claudiabrunoarquitetura"
               target="_blank"
               rel="noopener noreferrer"
               className="social-link"

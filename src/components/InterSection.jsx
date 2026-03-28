@@ -35,15 +35,15 @@ export const InterSection = () => {
   }, []);
 
   const images = [
-    "/images/project1.jpg",
-    "/images/project2.jpg",
-    "/images/project3.jpg",
-    "/images/project4.jpg",
-    "/images/project1.jpg",
-    "/images/project2.jpg",
-    "/images/project3.jpg",
-    "/images/project4.jpg",
-    "/images/project1.jpg",
+    "/images/sala-2.jpg",
+    "/images/banheira-1.jpg",
+    "/images/cozinha-2.jpg",
+    "/images/cozinha-1.jpg",
+    "/images/banheiro-1.jpg",
+    "/images/escada-3.jpg",
+    "/images/escada-1.jpg",
+    "/images/piscina-1.jpg",
+    "/images/sala-1.jpg",
   ];
 
   return (

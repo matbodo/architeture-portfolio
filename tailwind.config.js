@@ -4,8 +4,15 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        heading: ['"Playfair Display"', "Georgia", "serif"],
-        body: ['"Inter"', "system-ui", "sans-serif"],
+        heading: [
+          '"Tempus Sans ITC"',
+          '"Tempus Sans"',
+          '"Open Sans"',
+          '"Lato"',
+          '"Inter"',
+          "sans-serif",
+        ],
+        body: ['"Open Sans"', '"Lato"', '"Inter"', "system-ui", "sans-serif"],
       },
     },
   },

@@ -1,5 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lato:wght@400;700&family=Open+Sans:wght@400;600;700;800&display=swap");
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", "Lato", "Inter", system-ui, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -8,8 +10,8 @@
   background-color: #242424;
 
   /* Fontes do projeto */
-  --font-heading: "Playfair Display", Georgia, serif;
-  --font-body: "Inter", system-ui, sans-serif;
+  --font-heading: "Tempus Sans", "Open Sans", "Lato", "Inter", sans-serif;
+  --font-body: "Open Sans", "Lato", "Inter", system-ui, sans-serif;
 }
 
 body {
@@ -31,7 +33,7 @@ body {
 
 .hero-bg {
   @apply absolute inset-0 bg-cover bg-center bg-black/60 z-10;
-  background-image: url("/images/background.jpg");
+  background-image: url("/public/images/background.jpg");
 }
 
 .hero-overlay {
@@ -39,15 +41,17 @@ body {
 }
 
 .hero-content {
-  @apply relative z-10 container mx-auto h-full flex flex-col justify-center items-start px-4 lg:bottom-32 lg:right-20;
+  @apply relative z-10 container mx-auto h-full flex flex-col justify-center items-start px-4 lg:bottom-32;
 }
 
 .hero-title {
   @apply font-heading text-white leading-none text-4xl md:text-7xl lg:text-[6vw];
+  font-family: "Tempus Sans";
 }
 
 .hero-subtitle {
-  @apply mt-0 text-white/70 tracking-widest text-sm md:text-xl;
+  @apply mt-0 text-white/80 tracking-widest text-sm md:text-xl;
+  font-family: var(--font-body);
 }
 
 /* ========== NAV ==========*/
@@ -545,12 +549,12 @@ body {
   @apply absolute inset-0 bg-black/40;
 }
 
-.project-info {
+/* .project-info {
   @apply absolute bottom-8 left-8
          text-white z-10 pointer-events-none;
   width: max-content;
   white-space: nowrap;
-}
+} */
 
 .project-info h1 {
   @apply text-2xl tracking-widest uppercase;
@@ -567,6 +571,7 @@ body {
 
   .project-item {
     flex: none;
+    margin-bottom: 10px;
     min-height: 20vh;
     filter: none;
     transition: none;
@@ -722,4 +727,44 @@ body {
 .contact-bottom {
   @apply w-full flex flex-wrap items-center gap-1
          text-base text-white/40 mb-10;
+}
+
+/* ========== SCROLL TO TOP ==========*/
+
+.scroll-to-top {
+  @apply fixed bottom-8 right-8
+         w-12 h-12
+         bg-white/10 backdrop-blur-md
+         text-white text-xl
+         rounded-full
+         flex items-center justify-center
+         cursor-pointer
+         border border-white/20
+         transition-all duration-300 ease-out
+         z-[9999];
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  @apply bg-white/20 border-white/30;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.scroll-to-top:active {
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    @apply bottom-6 right-6 w-12 h-12 text-lg;
+  }
 }

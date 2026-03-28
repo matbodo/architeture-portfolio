@@ -4,56 +4,32 @@
 
 const projects = [
     {
-        title: "DOSEL",
-        location: "Heredia, Costa Rica",
-        type: "Residential",
-        image: "/images/project1.jpg",
+        // title: "DOSEL",
+        // location: "Heredia, Costa Rica",
+        // type: "Residential",
+        image: "/images/casa-1.jpg",
     },
     {
-        title: "LINEA DE VIDA",
-        location: "Medellin, Colombia",
-        type: "Mixed-use",
-        image: "/images/project2.jpg",
+        // title: "LINEA DE VIDA",
+        // location: "Medellin, Colombia",
+        // type: "Mixed-use",
+        image: "/images/casa-2.jpg",
     },
     {
-        title: "INTRACA",
-        location: "Heredia, Costa Rica",
-        type: "Workplace",
-        image: "/images/project3.jpg",
+        // title: "INTRACA",
+        // location: "Heredia, Costa Rica",
+        // type: "Workplace",
+        image: "/images/casa-3.jpg",
     },
     {
-        title: "CONCHAL",
-        location: "Guanacaste, Costa Rica",
-        type: "Hospitality",
-        image: "/images/project4.jpg",
+        // title: "CONCHAL",
+        // location: "Guanacaste, Costa Rica",
+        // type: "Hospitality",
+        image: "/images/casa-4.jpg",
     },
 ];
 
 export default function Projects() {
-    // useEffect(() => {
-    //     gsap.set(".project-item", {
-    //         y: 80,
-    //         opacity: 0,
-    //     });
-
-    //     gsap.to(".project-item", {
-    //         y: 0,
-    //         opacity: 1,
-    //         stagger: 0.2,
-    //         duration: 1.2,
-    //         ease: "power2.out",
-    //         scrollTrigger: {
-    //             trigger: "#projects",
-    //             start: "top 80%",
-    //             onEnter: () => console.log("Projects animation trigegered"),
-    //         }
-    //     });
-
-    //     return () => {
-    //         ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-    //     };
-    // }, [])
-
     return (
         <section id="projects" className="projects">
             <div className="projects-grid">

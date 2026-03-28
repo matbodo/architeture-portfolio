@@ -41,12 +41,12 @@ export default function Projects() {
                     >
                         <div className="project-overlay" />
 
-                        <div className="project-info">
-                            <h1>{project.title}</h1>
-                            {/* <p>
+                        {/* <div className="project-info">
+                            <h1>{project.title}</h1> */}
+                        {/* <p>
                                 {project.location} | {project.type}
                             </p> */}
-                        </div>
+                        {/* </div> */}
                     </article>
                 ))}
             </div>

@@ -35,7 +35,7 @@ export default function Projects() {
             <div className="projects-grid">
                 {projects.map((project) => (
                     <article
-                        key={project.title}
+                        // key={project.title}
                         className="project-item"
                         style={{ backgroundImage: `url(${project.image})` }}
                     >
@@ -43,9 +43,9 @@ export default function Projects() {
 
                         <div className="project-info">
                             <h1>{project.title}</h1>
-                            <p>
+                            {/* <p>
                                 {project.location} | {project.type}
-                            </p>
+                            </p> */}
                         </div>
                     </article>
                 ))}

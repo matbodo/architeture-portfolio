@@ -556,13 +556,13 @@ body {
   white-space: nowrap;
 } */
 
-.project-info h1 {
+/* .project-info h1 {
   @apply text-2xl tracking-widest uppercase;
 }
 
 .project-info p {
   @apply text-xl opacity-80 mt-1;
-}
+} */
 
 @media (max-width: 640px) {
   .projects-grid {

@@ -468,7 +468,7 @@ body {
 }
 
 .about-photo {
-  @apply w-80 h-80 pt-12
+  @apply w-72 h-72 pt-12
          object-cover
          shadow-xl;
 }
@@ -478,8 +478,8 @@ body {
 
 .about-glass-text {
   @apply text-white/90
-         text-3xl leading-relaxed
-         max-w-xs;
+         text-2xl leading-relaxed
+         max-w-lg;
 }
 
 .about-glass {
@@ -741,7 +741,7 @@ body {
          cursor-pointer
          border border-white/20
          transition-all duration-300 ease-out
-         z-[9999];
+         z-[500];
   opacity: 0;
   visibility: hidden;
   transform: translateY(20px);

@@ -91,16 +91,20 @@ const About = () => {
           />
 
           <p ref={textRef} className="about-glass-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget
-            ligula eu lectus lobortis condimentum.
+            Formada pela Universidade Estadual de Londrina, atua no
+            desenvolvimento de projetos de construção civil, arquitetura de
+            interiores, iluminação e paisagismo. Meu trabalho envolve desde o
+            detalhamento técnico e executivo até a criação de layouts, escolha
+            de materiais, cores e acabamentos, sempre equilibrando
+            funcionalidade e estética. Busco valorizar o entorno, atender às
+            necessidades dos clientes e contribuir para a qualidade de vida por
+            meio de soluções arquitetônicas bem planejadas.
           </p>
         </div>
       </div>
 
       <div ref={contentRef} className="about-content sm:hidden">
-        <h2>
-          Cada espaço carrega <br /> uma intenção.
-        </h2>
+        <h2>Arquitetura que valoriza o espaço e quem vive nele.</h2>
       </div>
     </section>
   );

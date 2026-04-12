@@ -49,7 +49,7 @@ const Hero = () => {
             Arquitetura
           </h1>
           <h2 className="hero-subtitle">
-            Residencial • Interiores • Comercial
+            Paisagismo • Civil • Iluminação • Interiores
           </h2>
         </div>
       </section>

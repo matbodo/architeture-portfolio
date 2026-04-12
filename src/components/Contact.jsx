@@ -41,15 +41,6 @@ export const Contact = () => {
         <div className="contact-cta-row">
           <div className="contact-socials">
             <a
-              href="https://facebook.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="Facebook"
-            >
-              <FaFacebookF />
-            </a>
-            <a
               href="https://instagram.com/claudiabrunoarquitetura"
               target="_blank"
               rel="noopener noreferrer"
@@ -57,15 +48,6 @@ export const Contact = () => {
               aria-label="Instagram"
             >
               <FaInstagram />
-            </a>
-            <a
-              href="https://linkedin.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label="LinkedIn"
-            >
-              <FaLinkedinIn />
             </a>
           </div>
         </div>

@@ -1,4 +1,9 @@
-import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaWhatsapp,
+} from "react-icons/fa";
 
 export const Contact = () => {
   return (
@@ -48,6 +53,16 @@ export const Contact = () => {
               aria-label="Instagram"
             >
               <FaInstagram />
+            </a>
+
+            <a
+              href="https://wa.me/5515997888499"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+              aria-label="Whatsapp"
+            >
+              <FaWhatsapp />
             </a>
           </div>
         </div>

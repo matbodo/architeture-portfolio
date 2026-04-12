@@ -33,7 +33,7 @@ body {
 
 .hero-bg {
   @apply absolute inset-0 bg-cover bg-center bg-black/60 z-10;
-  background-image: url("/public/images/background-1.webp");
+  background-image: url("/images/background-1.webp");
 }
 
 .hero-overlay {

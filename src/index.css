@@ -33,7 +33,7 @@ body {
 
 .hero-bg {
   @apply absolute inset-0 bg-cover bg-center bg-black/60 z-10;
-  background-image: url("/public/images/background.jpg");
+  background-image: url("/public/images/background-1.webp");
 }
 
 .hero-overlay {
@@ -147,7 +147,7 @@ body {
   position: absolute;
   z-index: 1;
   inset: -30% 0%;
-  background-image: url("/images/bg-image-1.jpg");
+  background-image: url("/images/bg-image-1.webp");
   background-size: cover;
   background-position: center;
   will-change: transform;
@@ -225,7 +225,7 @@ body {
   position: absolute;
   z-index: 1;
   inset: -30% 0%;
-  background-image: url("/images/bg-image-2.png");
+  background-image: url("/images/bg-image-2.webp");
   background-size: cover;
   background-position: center;
   will-change: transform;
@@ -444,7 +444,7 @@ body {
 
 .about-bg {
   @apply absolute inset-0 bg-cover bg-center z-10;
-  background-image: url("/images/background-2.jpg");
+  background-image: url("/images/background-2.webp");
 }
 
 .about-overlay {
@@ -496,43 +496,6 @@ body {
   -webkit-backdrop-filter: blur(22px) saturate(160%);
 
   border-right: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-@media (max-width: 640px) {
-  .about {
-    min-height: auto;
-    padding: 3rem 0 4rem;
-    align-items: flex-start;
-  }
-
-  .about-glass {
-    position: relative;
-    width: calc(100% - 2rem);
-    height: auto;
-    margin: 0 auto;
-    border-right: none;
-    border-radius: 28px;
-  }
-
-  .about-glass-inner {
-    padding: 1.5rem 1.25rem 2.5rem;
-    gap: 1.5rem;
-  }
-
-  .about-photo {
-    width: min(100%, 18rem);
-    height: auto;
-    padding-top: 0;
-    aspect-ratio: 1 / 1;
-  }
-
-  .about-glass-text {
-    max-width: none;
-    font-size: clamp(1.05rem, 4.8vw, 1.35rem);
-    line-height: 1.7;
-    letter-spacing: -0.01em;
-    text-wrap: pretty;
-  }
 }
 
 @keyframes liquidMove {

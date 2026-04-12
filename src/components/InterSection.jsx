@@ -36,10 +36,10 @@ export const InterSection = () => {
 
   const images = [
     "/images/sala-2.jpg",
-    "/images/banheira-1.jpg",
+    "/images/banheira-1.webp",
     "/images/cozinha-2.jpg",
-    "/images/cozinha-1.jpg",
-    "/images/banheiro-1.jpg",
+    "/images/cozinha-1.webp",
+    "/images/banheiro-1.webp",
     "/images/escada-3.jpg",
     "/images/escada-1.jpg",
     "/images/piscina-1.jpg",

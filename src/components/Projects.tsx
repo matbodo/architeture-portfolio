@@ -7,25 +7,25 @@ const projects = [
         // title: "DOSEL",
         // location: "Heredia, Costa Rica",
         // type: "Residential",
-        image: "/images/casa-1.jpg",
+        image: "/images/casa-1.webp",
     },
     {
         // title: "LINEA DE VIDA",
         // location: "Medellin, Colombia",
         // type: "Mixed-use",
-        image: "/images/casa-2.jpg",
+        image: "/images/casa-2.webp",
     },
     {
         // title: "INTRACA",
         // location: "Heredia, Costa Rica",
         // type: "Workplace",
-        image: "/images/casa-3.jpg",
+        image: "/images/casa-3.webp",
     },
     {
         // title: "CONCHAL",
         // location: "Guanacaste, Costa Rica",
         // type: "Hospitality",
-        image: "/images/casa-4.jpg",
+        image: "/images/casa-4.webp",
     },
 ];
 

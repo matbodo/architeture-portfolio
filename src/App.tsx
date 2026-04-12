@@ -32,7 +32,33 @@ function App() {
     return () => {
       lenis.destroy();
     };
-  })
+  }, []);
+
+  useEffect(() => {
+    const imagesPreLoad = [
+      "/images/bg-image-1.jpg",
+      "/images/bg-image-2.png",
+      "/images/sala-2.jpg",
+      "/images/banheira-1.jpg",
+      "/images/cozinha-2.jpg",
+      "/images/cozinha-1.jpg",
+      "/images/banheiro-1.jpg",
+      "/images/escada-3.jpg",
+      "/images/escada-1.jpg",
+      "/images/piscina-1.jpg",
+      "/images/sala-1.jpg",
+    ];
+
+    const preLoadImages = imagesPreLoad.map((src) => {
+      const img = new Image();
+      img.src = src;
+      return img;
+    });
+
+    return () => {
+      preLoadImages.length = 0;
+    }
+  }, []);
 
 
   return (
